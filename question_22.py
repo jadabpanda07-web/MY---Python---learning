@@ -10,4 +10,5 @@ for i in range(n):
 
 # remove duplicates
 list = (set(list))
+list = sorted(list)
 print("List after removing duplicates:", list)

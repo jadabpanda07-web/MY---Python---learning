@@ -1,23 +1,15 @@
-# Find the largest and smallest element in a list without using max() and min()
-numbers = []
+numbers = [12, 4, 56, 7, -3, 45, 0]
 
-n = int(input('Enter the number of elements: '))
+# Start with the first element
+smallest = numbers[0]
+largest = numbers[0]
 
-for i in range(n):
-    element = float(input('Enter an element: '))
-    numbers.append(element)
+# Loop through the list
+for num in numbers:
+    if num < smallest:
+        smallest = num
+    if num > largest:
+        largest = num
 
-if not numbers:
-    print('The list is empty.')
-else:
-    smallest = numbers[0]
-    largest = numbers[0]
-
-    for number in numbers[1:]:
-        if number < smallest:
-            smallest = number
-        if number > largest:
-            largest = number
-
-    print('Smallest element:', smallest)
-    print('Largest element:', largest)
+print("Smallest:", smallest)
+print("Largest:", largest)
